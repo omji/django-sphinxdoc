@@ -4,7 +4,7 @@ URL conf for django-sphinxdoc.
 
 """
 from django.conf.urls.defaults import patterns, url
-from django.views.generic import list_detail
+from django.views.generic import ListView
 
 from sphinxdoc import models
 from sphinxdoc.views import ProjectSearchView
@@ -12,13 +12,13 @@ from sphinxdoc.views import ProjectSearchView
 
 project_info = {
     'queryset': models.Project.objects.all().order_by('name'),
-    'template_object_name': 'project',
+    'context_object_name': 'project',
 }
 
 urlpatterns = patterns('sphinxdoc.views',
     url(
         r'^$',
-        list_detail.object_list,
+        ListView.as_view(**project_info),
         project_info,
     ),
     url(
