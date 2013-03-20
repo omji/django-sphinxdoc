@@ -12,7 +12,7 @@ from sphinxdoc.views import ProjectSearchView
 
 project_info = {
     'queryset': models.Project.objects.all().order_by('name'),
-    'context_object_name': 'project',
+    'context_object_name': 'project_list',
 }
 
 urlpatterns = patterns('sphinxdoc.views',
