@@ -19,9 +19,7 @@ setup(
         'sphinxdoc.management',
         'sphinxdoc.management.commands',
     ],
-    package_data={
-        'sphinxdoc': ['templates/sphinxdoc/*'],
-    },
+    include_package_data = True,
     classifiers=[
         'Development Status :: 5 - Production/Stable',
         'Environment :: Web Environment',
