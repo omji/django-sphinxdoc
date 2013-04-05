@@ -13,4 +13,4 @@ class DocumentSitemap(Sitemap):
     changefreq = 'weekly'
 
     def items(self):
-        return Document.objects.all()
+        return Document.objects.exclude(path='index').exclude(path='genindex')
