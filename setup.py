@@ -12,7 +12,6 @@ setup(
     description='Easily integrate Sphinx documentation into your website.',
     long_description=open('README.txt').read(),
     url='http://stefan.sofa-rockers.org/django-sphinxdoc/',
-    download_url='http://bitbucket.org/scherfke/django-sphinxdoc/downloads/',
     license='BSD',
     packages=[
         'sphinxdoc',
